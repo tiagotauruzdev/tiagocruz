@@ -2,6 +2,6 @@
 
 import Portfolio from "../page"
 
-export default function SyntheticV0PageForDeployment() {
+export default function Page() {
   return <Portfolio />
 }
