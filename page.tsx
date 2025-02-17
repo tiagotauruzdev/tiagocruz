@@ -5,6 +5,12 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 export default function Portfolio() {
   const projects = [
@@ -27,6 +33,14 @@ export default function Portfolio() {
         "https://sjc.microlink.io/3M93S3y-lz7MA5PqzXvy1vRhtIrcZ6Mw8XUX91XY_BRMZUb3HQ7fPYR-HAiR-FJVwRBZpGwCbfLxzUDYSvWecw.jpeg",
       featured: true,
       tags: ["Educação", "IA", "Automação", "Carreira"],
+    },
+    {
+      name: "Dashboard Financeiro",
+      description:
+        "Dashboard interativo para análise e visualização de dados financeiros. Interface moderna com gráficos dinâmicos para acompanhamento de receitas, despesas e indicadores financeiros.",
+      url: "https://github.com/tiagotauruzdev/financas",
+      featured: true,
+      tags: ["Dashboard", "Finanças", "Análise de Dados", "Visualização"],
     },
     {
       name: "Clínica",
@@ -81,42 +95,64 @@ export default function Portfolio() {
               <p className="max-w-[800px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Desenvolvedor Full Stack & Especialista em Automação e IA
             </p>
-              <div className="flex items-center gap-2 text-sm text-gray-300">
-              <MapPin className="h-4 w-4" />
-              <span>Centro - Areiópolis/SP</span>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link href="https://github.com/tiagotauruzdev" target="_blank">
-                <Button variant="outline" size="icon" className="bg-transparent text-gray-200 hover:text-white hover:bg-white/10">
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
-              </Link>
-              <Link href="https://www.linkedin.com/in/tiago-cruz-aa8128b7/" target="_blank">
-                <Button variant="outline" size="icon" className="bg-transparent text-gray-200 hover:text-white hover:bg-white/10">
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </Button>
-              </Link>
-              <Link href="https://instagram.com/tiagocruz.ia" target="_blank">
-                <Button variant="outline" size="icon" className="bg-transparent text-gray-200 hover:text-white hover:bg-white/10">
-                  <Instagram className="h-5 w-5" />
-                  <span className="sr-only">Instagram</span>
-                </Button>
-              </Link>
-              <Link href="mailto:tiagocruz.lp@gmail.com">
-                <Button variant="outline" size="icon" className="bg-transparent text-gray-200 hover:text-white hover:bg-white/10">
-                  <Mail className="h-5 w-5" />
-                  <span className="sr-only">Email</span>
-                </Button>
-              </Link>
-              <Link href="tel:+5514997683073">
-                <Button variant="outline" size="icon" className="bg-transparent text-gray-200 hover:text-white hover:bg-white/10">
-                  <Phone className="h-5 w-5" />
-                  <span className="sr-only">Telefone</span>
-                </Button>
-              </Link>
-            </div>
+              <div className="flex items-center gap-4 text-gray-300 mt-4 relative z-10">
+                <TooltipProvider>
+                  <Tooltip delayDuration={0}>
+                    <TooltipTrigger asChild>
+                      <Link href="https://github.com/tiagotauruzdev" target="_blank" className="p-2 hover:text-primary transition-colors rounded-full hover:bg-white/10">
+                        <Github className="h-5 w-5" />
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="bg-background border-primary">
+                      <p className="text-sm font-medium">github.com/tiagotauruzdev</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip delayDuration={0}>
+                    <TooltipTrigger asChild>
+                      <Link href="https://www.linkedin.com/in/tiago-cruz-aa8128b7" target="_blank" className="p-2 hover:text-primary transition-colors rounded-full hover:bg-white/10">
+                        <Linkedin className="h-5 w-5" />
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="bg-background border-primary">
+                      <p className="text-sm font-medium">linkedin.com/in/tiago-cruz-aa8128b7</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip delayDuration={0}>
+                    <TooltipTrigger asChild>
+                      <Link href="https://www.instagram.com/tiagocruz.ia/" target="_blank" className="p-2 hover:text-primary transition-colors rounded-full hover:bg-white/10">
+                        <Instagram className="h-5 w-5" />
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="bg-background border-primary">
+                      <p className="text-sm font-medium">instagram.com/tiagocruz.ia</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip delayDuration={0}>
+                    <TooltipTrigger asChild>
+                      <Link href="mailto:tiagocruz.lp@gmail.com" className="p-2 hover:text-primary transition-colors rounded-full hover:bg-white/10">
+                        <Mail className="h-5 w-5" />
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="bg-background border-primary">
+                      <p className="text-sm font-medium">tiagocruz.lp@gmail.com</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip delayDuration={0}>
+                    <TooltipTrigger asChild>
+                      <Link href="tel:14997683073" className="p-2 hover:text-primary transition-colors rounded-full hover:bg-white/10">
+                        <Phone className="h-5 w-5" />
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="bg-background border-primary">
+                      <p className="text-sm font-medium">(14) 99768-3073</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
           </div>
         </div>
       </section>
@@ -175,74 +211,40 @@ export default function Portfolio() {
       <section className="py-12 md:py-24 w-full">
         <div className="w-full">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-8">Projetos</h2>
-          <div className="grid gap-8">
-            {/* Featured Projects */}
-            <div className="grid gap-6 md:grid-cols-2 max-w-[800px] mx-auto">
-              {projects
-                .filter((project) => project.featured)
-                .map((project, index) => (
-                  <Card key={index} className="flex flex-col h-full">
-                    {project.preview && (
-                      <div className="relative w-full h-48 overflow-hidden rounded-t-lg">
-                        <Image
-                          src={project.preview || "/placeholder.svg"}
-                          alt={project.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    )}
-                    <CardHeader>
-                      <CardTitle className="text-xl flex items-center gap-2">{project.name}</CardTitle>
-                      <CardDescription className="text-base">{project.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex-1">
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.tags?.map((tag, i) => (
-                          <Badge key={i} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                      <Link href={project.url} target="_blank">
-                        <Button variant="outline" className="w-full">
-                          <Github className="mr-2 h-4 w-4" />
-                          Ver Projeto
-                        </Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
-            </div>
-
-            {/* Other Projects */}
-            <div className="grid gap-6 md:grid-cols-3 max-w-[800px] mx-auto">
-              {projects
-                .filter((project) => !project.featured)
-                .map((project, index) => (
-                  <Card key={index} className="flex flex-col h-full">
-                    <CardHeader>
-                      <CardTitle>{project.name}</CardTitle>
-                      <CardDescription>{project.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex-1">
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.tags?.map((tag, i) => (
-                          <Badge key={i} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                      <Link href={project.url} target="_blank">
-                        <Button variant="outline" className="w-full">
-                          <Github className="mr-2 h-4 w-4" />
-                          Ver no GitHub
-                        </Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
-            </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-[1000px] mx-auto">
+            {projects.map((project, index) => (
+              <Card key={index} className="flex flex-col h-full">
+                {project.preview && (
+                  <div className="relative w-full h-48 overflow-hidden rounded-t-lg">
+                    <Image
+                      src={project.preview || "/placeholder.svg"}
+                      alt={project.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <CardHeader>
+                  <CardTitle className="text-xl flex items-center gap-2">{project.name}</CardTitle>
+                  <CardDescription className="text-base">{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-1">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags?.map((tag, i) => (
+                      <Badge key={i} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                  <Link href={project.url} target="_blank">
+                    <Button variant="outline" className="w-full">
+                      <Github className="mr-2 h-4 w-4" />
+                      Ver Projeto
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -263,7 +265,7 @@ export default function Portfolio() {
                 </Link>
               </Button>
               <Button variant="outline" className="w-full" asChild>
-                <Link href="tel:+5514997683073">
+                <Link href="tel:14997683073">
                   <Phone className="mr-2 h-4 w-4" />
                   (14) 99768-3073
                 </Link>
