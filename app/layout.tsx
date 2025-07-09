@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Tiago Cruz - Desenvolvedor Full Stack & Especialista em IA',
-  description: 'Portfolio de projetos e contato profissional de Tiago Cruz',
+  title: 'Tiago Cruz - Especialista em Automação e Inteligência Artificial',
+  description: 'Especialista em IA, Automação e Chatbots. Soluções personalizadas com OpenAI, Claude, Gemini e N8N.',
   generator: 'Next.js',
 }
 

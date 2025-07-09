@@ -43,37 +43,35 @@ export default function Portfolio() {
       tags: ["Dashboard", "Finanças", "Análise de Dados", "Visualização"],
     },
     {
-      name: "Clínica",
-      description: "Sistema de gerenciamento para clínicas",
-      url: "https://clinica-snowy.vercel.app",
-      featured: false,
-      tags: ["Saúde", "Gestão", "Sistema"],
+      name: "Chatbots Inteligentes",
+      description: "Desenvolvimento de chatbots personalizados utilizando APIs de LLMs (OpenAI, Claude, Gemini) com técnicas avançadas de Prompt Engineering e RAG para automação de atendimento.",
+      url: "https://github.com/tiagotauruzdev",
+      featured: true,
+      tags: ["Chatbots", "LLMs", "OpenAI", "Claude", "Gemini"],
     },
     {
-      name: "Finanças Pessoais",
-      description: "Aplicação para gerenciamento de finanças pessoais",
-      url: "https://github.com/tiagotauruzdev/financas-pessoais",
-      featured: false,
-      tags: ["Finanças", "Gestão", "Aplicativo"],
+      name: "Automação N8N",
+      description: "Criação e implementação de fluxos de trabalho complexos com N8N, integrando diversas APIs para otimizar processos operacionais e aumentar a eficiência empresarial.",
+      url: "https://github.com/tiagotauruzdev",
+      featured: true,
+      tags: ["N8N", "Automação", "APIs", "Workflows"],
     },
     {
-      name: "TaskMaster",
-      description: "Aplicativo de gerenciamento de tarefas",
-      url: "https://github.com/tiagotauruzdev/taskmaster",
-      featured: false,
-      tags: ["Produtividade", "Gestão", "Aplicativo"],
+      name: "Análise Preditiva com IA",
+      description: "Aplicação de técnicas de IA Generativa e análise preditiva para identificar gargalos e otimizar a tomada de decisão estratégica em empresas.",
+      url: "https://github.com/tiagotauruzdev",
+      featured: true,
+      tags: ["IA Generativa", "Análise Preditiva", "Python", "Machine Learning"],
     },
   ]
 
   const skills = [
-    { category: "Desenvolvimento", items: ["C", "C++", "JavaScript", "React", "Python", "APIs"] },
+    { category: "Inteligência Artificial", items: ["OpenAI API", "Claude API", "Gemini API", "DeepSeek API", "Prompt Engineering", "RAG"] },
+    { category: "Automação", items: ["N8N", "Automação Industrial", "IoT", "Pipelines de Dados", "Integração de APIs"] },
+    { category: "Desenvolvimento", items: ["JavaScript", "React", "Python", "C", "C++", "APIs REST"] },
     { category: "Banco de Dados", items: ["SQL", "MySQL", "PostgreSQL"] },
     { category: "DevOps", items: ["Docker", "Git", "Servidores Linux"] },
-    {
-      category: "IA e Automação",
-      items: ["OpenAI API", "Claude API", "Gemini API", "DeepSeek API", "Automação Industrial", "IoT"],
-    },
-    { category: "Outros", items: ["WordPress", "Redes", "Eletrônica"] },
+    { category: "Certificações", items: ["Especialista IA - Pipefy", "Integrações & API - Pipefy", "Administrador de Sistemas - Pipefy"] },
   ]
 
   return (
@@ -93,7 +91,7 @@ export default function Portfolio() {
             </div>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl text-white">Tiago Cruz</h1>
               <p className="max-w-[800px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Desenvolvedor Full Stack & Especialista em Automação e IA
+              Especialista em Automação e Inteligência Artificial
             </p>
               <div className="flex items-center gap-4 text-gray-300 mt-4 relative z-10">
                 <TooltipProvider>
@@ -163,13 +161,13 @@ export default function Portfolio() {
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-8">Sobre</h2>
           <div className="max-w-[800px] mx-auto text-gray-500 dark:text-gray-400 space-y-4">
             <p>
-              Profissional da área de Tecnologia da Informação com experiência em desenvolvimento Full-Stack, automação
-              de processos, banco de dados e infraestrutura de TI.
+              Analista de TI Pleno especializado em soluções de Automação com Inteligência Artificial. Atualmente no Shopping Park Botucatu, lidero o desenvolvimento e implementação de chatbots e AI Agents utilizando APIs de LLMs (OpenAI, Claude, Gemini).
             </p>
             <p>
-              Possui conhecimentos sólidos em C, C++, JavaScript (React), APIs, bancos de dados SQL, servidores, redes,
-              WordPress e Docker. Especializado em soluções inovadoras, incluindo automação de atendimento, integração
-              de sistemas, dashboards interativos e aplicações de Inteligência Artificial.
+              Especialista em técnicas de Engenharia de Prompt e RAG para automação avançada de atendimento. Experiência sólida no desenvolvimento de fluxos de trabalho complexos com N8N, integração de APIs e aplicação de IA Generativa para análise preditiva e otimização de processos empresariais.
+            </p>
+            <p>
+              Certificado pela Pipefy como Especialista em Inteligência Artificial, Integrações & API e Administrador de Sistemas. Desenvolvedor autônomo com foco em soluções personalizadas de automação para PMEs.
             </p>
           </div>
         </div>
